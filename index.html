@@ -77,6 +77,11 @@
     span.highlight {
       background-color: #ffffd0;
     }
+
+    .superscript {
+      vertical-align: super;
+      font-size: smaller;
+    }
   </style>
   <link rel="shortcut icon" href="images/ICON.JPG" type="image/x-icon">
   <title>Zheng Gu</title>
@@ -95,25 +100,27 @@
               <p align="center">
                 <name>Zheng Gu (<font style="font-family:KaiTi">顾峥</font>)</name> <br>
               </p>
-              <p>I am last-year a Ph.D. candidate at Department of Computer Science and Technology, Nanjing University as a member
-                of
-                <a href="https://cs.nju.edu.cn/rl">Reasoning and Learning Group</a>, advised by
-                <a href="https://cs.nju.edu.cn/gaoyang/">Prof. Yang Gao</a> and
-                <a href="https://cs.nju.edu.cn/huojing">Prof. Jing Huo</a>.
+              <p style="text-align: justify;">
+                I am last-year a Ph.D. candidate at <a href="https://cs.nju.edu.cn/">Department of Computer Science and Technology</a>, 
+                <a href="https://www.nju.edu.cn/">Nanjing University</a>, advised by
+                Prof. <a href="https://cs.nju.edu.cn/gaoyang/">Yang Gao</a> and
+                Prof. <a href="https://cs.nju.edu.cn/huojing">Jing Huo</a>.
+                I am also a joint Ph.D. at <a href="https://www.cs.cityu.edu.hk/">Department of Computer Science</a>, 
+                <a href="https://www.cityu.edu.hk/">City Univercity of Hong Kong</a>, advised by 
+                Prof. <a href="https://www.cityu.edu.hk/stfprofile/jingliao.htm">Jing Liao</a>.
+                I received my B.Sc. degree in Computer Science and Technology from Nanjing University.
               </p>
-              <p>Currently, I am also a joint Ph.D. at Department of Computer Science and Technology, City Univercity of
-                HongKong, advised by <a href="https://www.cityu.edu.hk/stfprofile/jingliao.htm">Prof. Jing Liao</a>.
+              <p style="text-align: justify;">
+                My research interests lie in machine learning, pattern analysis, and computer vision, particularly in enabling visual generative models to achieve 
+                efficient transferability, generalization, and their potential applications in open-world scenarios such as few-shot learning and continual learning.
               </p>
               <p>
-                I received my B.Sc. degree in Computer Science and Technology from Nanjing University.
-                My research interests lie in machine learning and computer vision, with a focus on the application
-                and adaptation of generative models in cross-domain and few-shot scenarios.
-              </p>
+                Email: guzheng@smail.nju.edu.cn; zhenggu4-c@my.cityu.edu.hk
               </p>
               <p align=center>
-                <a href="mailto:guzheng@smail.nju.edu.cn">Email</a> &nbsp/&nbsp
                 <a href="https://github.com/edward3862">GitHub</a> &nbsp/&nbsp
-                <a href="https://scholar.google.com/citations?user=Nwg_u4EAAAAJ">Google Scholar</a>
+                <a href="https://scholar.google.com/citations?user=Nwg_u4EAAAAJ">Google Scholar</a>  &nbsp/&nbsp
+                <a href="files/CV_GUZheng.pdf">CV</a>
               </p>
             </td>
             <!-- <td width="3%">
@@ -126,7 +133,33 @@
           </tr>
         </table>
 
-        <table width="101%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="100%" valign="middle" style="line-height: 0.5;">
+              <heading>News</heading>
+              <p>
+                &#8226; 2024-12-19: I will join the <a href="https://vcc.tech/index">VCC</a> team at Shenzhen University, led by Prof. <a href="https://vcc.tech/~huihuang/home">Hui Huang</a>, starting in 2025.
+              </p>
+              <p>
+                &#8226; 2024-12-17: I defend my PhD thesis at City University of Hong Kong.
+              </p>
+              <p>
+                &#8226; 2024-11-08: I defend my PhD thesis at Nanjing University.
+              </p>
+              <p>
+                &#8226; 2024-10-20: I am invited to give a talk at PRCV 2024 PhD Workshop.
+              </p>
+              <p>
+                &#8226; 2024-06-25: One paper (LiesGAN) is accepted by PRCV 2024.
+              </p>
+              <p>
+                &#8226; 2024-03-26: One paper (Analogist) is accepted by SIGGRAPH 2024.
+              </p>
+            </td>
+          </tr>
+        </table>
+        
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td width="100%" valign="middle">
               <!-- color= #ef988c -->
@@ -140,6 +173,27 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td style="width:25%; vertical-align:middle;">
+              <img src="images/gu2024liesgan.jpg" alt="b3do" width="180" height="90" style="border-style: none">
+            </td>
+            <td valign="top" width="75%">
+              <papertitle>
+                Task-Aware Few-Shot Image Generation via Dynamic Local Distribution Estimation and Sampling
+              </papertitle>
+              <br>
+              <strong>Zheng Gu</strong>, Wenbin Li*, Tianyu Ding, Zhengli Wang, Jing Huo, Kuihua Huang, and Yang Gao
+              <br>
+              <em>Chinese Conference on Pattern Recognition and Computer Vision (PRCV)</em>, 2024
+              <br>
+              <a href="https://link.springer.com/chapter/10.1007/978-981-97-8490-5_33">[Paper]</a>
+              <a>[Code]</a>
+              <p>
+              </p>
+            </td>
+          </tr>
+          
+          
+          <tr>
+            <td style="width:25%; vertical-align:middle;">
               <img src="images/gu2024analogist.jpg" alt="b3do" width="180" height="90" style="border-style: none">
             </td>
             <td valign="top" width="75%">
@@ -147,7 +201,7 @@
                 Analogist: Out-of-the-box Visual In-Context Learning with Image Diffusion Model
               </papertitle>
               <br>
-              <strong>Zheng Gu</strong>, Shiyuan Yang, Jing Liao, Jing Huo, Yang Gao
+              <strong>Zheng Gu</strong>, Shiyuan Yang, Jing Liao*, Jing Huo*, and Yang Gao
               <br>
               <em>ACM Transactions on Graphics (Proceedings of SIGGRAPH)</em>, 2024
               <br>
@@ -170,7 +224,7 @@
                 CariMe: Unpaired Caricature Generation with Multiple Exaggerations
               </papertitle>
               <br>
-              <strong>Zheng Gu</strong>, Chuanqi Dong, Jing Huo, Wenbin Li, Yang Gao
+              <strong>Zheng Gu</strong>, Chuanqi Dong, Jing Huo*, Wenbin Li, and Yang Gao
               <br>
               <em>IEEE Transactions on Multimedia (TMM)</em>, 2021
               <br>
@@ -192,7 +246,7 @@
                 LoFGAN: Fusing Local Representations for Few-shot Image Generation
               </papertitle>
               <br>
-              <strong>Zheng Gu</strong>, Wenbin Li, Jing Huo, Lei Wang, Yang Gao
+              <strong>Zheng Gu</strong><span class="superscript">&#8224;</span>, Wenbin Li<span class="superscript">&#8224;</span>, Jing Huo*, Lei Wang, and Yang Gao
               <br>
               <em>International Conference on Computer Vision (ICCV)</em>, 2021
               <br>
@@ -213,7 +267,7 @@
                 Learning Task-aware Local Representations for Few-shot Learning
               </papertitle>
               <br>
-              Chuanqi Dong, Wenbin Li, Jing Huo, <strong>Zheng Gu</strong>, Yang Gao
+              Chuanqi Dong, Wenbin Li, Jing Huo, <strong>Zheng Gu</strong>, and Yang Gao*
               <br>
               <em>International Joint Conference on Artificial Intelligence (IJCAI)</em>, 2020
               <br>
@@ -233,7 +287,7 @@
                 Unsupervised Domain Attention Adaptation Network for Caricature Attribute Recognition
               </papertitle>
               <br>
-              Wen Ji, Kelei He, Jing Huo, <strong>Zheng Gu</strong>, Yang Gao
+              Wen Ji, Kelei He, Jing Huo*, <strong>Zheng Gu</strong>, and Yang Gao
               <br>
               <em>European Conference on Computer Vision (ECCV)</em>, 2020
               <br>
@@ -253,7 +307,7 @@
                 DeepMEF: A Deep Model Ensemble Framework for Video Based Multi-modal Person Identification
               </papertitle>
               <br>
-              Chuanqi Dong, <strong>Zheng Gu</strong>, Zhonghao Huang, Wen Ji, Jing Huo, Yang Gao
+              Chuanqi Dong, <strong>Zheng Gu</strong>, Zhonghao Huang, Wen Ji, Jing Huo, and Yang Gao
               <br>
               <em>ACM Multimedia</em>, 2019
               <br>
@@ -325,7 +379,7 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td width="100%" valign="middle">
-              <heading>Work Experience</heading>
+              <heading>Experience</heading>
               <p>
                 <strong>2023.12~2024.07</strong> &nbsp &nbsp &nbsp Research Assistant at CityU Shenzhen Research Institute
               </p>
