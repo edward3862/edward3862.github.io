@@ -1,973 +1,1039 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zheng Gu</title>
-    <meta name="author" content="Zheng Gu" />
-    <link rel="shortcut icon" href="asset/ICON.JPG" type="image/x-icon" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <style>
-      body {
-        font-family: "Lato", Verdana, Helvetica, sans-serif;
-        background-color: #f7f7f7;
-        color: #333;
-        line-height: 1.6;
-        margin: 0;
-        padding: 20px;
-      }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Zheng Gu</title>
+        <meta name="author" content="Zheng Gu" />
+        <link rel="shortcut icon" href="asset/ICON.JPG" type="image/x-icon" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <style>
+            body {
+                font-family: 'Lato', Verdana, Helvetica, sans-serif;
+                background-color: #f7f7f7;
+                color: #333;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+            }
 
-      a {
-        color: #1772d0;
-        text-decoration: none;
-      }
+            a {
+                color: #1772d0;
+                text-decoration: none;
+            }
 
-      a:focus,
-      a:hover {
-        color: #f09228;
-        text-decoration: underline;
-      }
+            a:focus,
+            a:hover {
+                color: #f09228;
+                text-decoration: underline;
+            }
 
-      .container {
-        max-width: 900px;
-        margin: 0 auto;
-        background-color: #ffffff;
-        padding: 30px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-      }
+            .container {
+                max-width: 900px;
+                margin: 0 auto;
+                background-color: #ffffff;
+                padding: 30px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+            }
 
-      h1 {
-        font-size: 2.5em;
-        color: #333;
-        margin-bottom: 0.2em;
-      }
+            h1 {
+                font-size: 2.5em;
+                color: #333;
+                margin-bottom: 0.2em;
+            }
 
-      h2.section-heading {
-        font-size: 1.8em;
-        color: #1772d0;
-        margin-top: 2em;
-        margin-bottom: 1em;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 0.5em;
-      }
+            h2.section-heading {
+                font-size: 1.8em;
+                color: #1772d0;
+                margin-top: 2em;
+                margin-bottom: 1em;
+                border-bottom: 2px solid #eee;
+                padding-bottom: 0.5em;
+            }
 
-      h3.paper-title {
-        font-size: 1em;
-        font-weight: 700;
-        margin-top: 0;
-        margin-bottom: 0.5em;
-      }
+            h3.paper-title {
+                font-size: 1em;
+                font-weight: 700;
+                margin-top: 0;
+                margin-bottom: 0.5em;
+            }
 
-      .name {
-        font-size: 2.2em;
-        font-weight: bold;
-        text-align: center;
-      }
+            .name {
+                font-size: 2.2em;
+                font-weight: bold;
+                text-align: center;
+            }
 
-      .position {
-        font-size: 1em;
-        text-align: center;
-        color: #555;
-        margin-bottom: 1.5em;
-      }
+            .position {
+                font-size: 1em;
+                text-align: center;
+                color: #555;
+                margin-bottom: 1.5em;
+            }
 
-      .pintop {
-        font-weight: bold;
-        font-size: 1em;
-        color: #d32a13;
-        background-color: #fff0f0;
-        padding: 15px 20px;
-        border-radius: 5px;
-        text-align: center;
-        margin-bottom: 2em;
-        border: 1px solid #d32a13;
-      }
+            .pintop {
+                font-weight: bold;
+                font-size: 1em;
+                color: #d32a13;
+                background-color: #fff0f0;
+                padding: 15px 20px;
+                border-radius: 5px;
+                text-align: center;
+                margin-bottom: 2em;
+                border: 1px solid #d32a13;
+            }
 
-      .superscript {
-        vertical-align: super;
-        font-size: 0.7em;
-      }
+            .superscript {
+                vertical-align: super;
+                font-size: 0.7em;
+            }
 
-      span.highlight {
-        background-color: #ffffd0;
-      }
+            span.highlight {
+                background-color: #ffffd0;
+            }
 
-      .profile-section {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        align-items: center;
-        margin-bottom: 40px;
-      }
+            .profile-section {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+                align-items: center;
+                margin-bottom: 40px;
+            }
 
-      .profile-info {
-        flex: 3;
-        min-width: 300px;
-      }
+            .profile-info {
+                flex: 3;
+                min-width: 300px;
+            }
 
-      .profile-image-wrapper {
-        flex: 1;
-        min-width: 150px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+            .profile-image-wrapper {
+                flex: 1;
+                min-width: 150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
-      .profile-image {
-        width: 100%;
-        max-width: 250px;
-        height: auto;
-        object-fit: cover;
-        border-radius: 50%;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-        border: 1px solid #fff;
-      }
+            .profile-image {
+                width: 100%;
+                max-width: 250px;
+                height: auto;
+                object-fit: cover;
+                border-radius: 50%;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+                border: 1px solid #fff;
+            }
 
-      p,
-      ul {
-        font-size: 1em;
-        margin-bottom: 1em;
-        text-align: justify;
-      }
+            p,
+            ul {
+                font-size: 1em;
+                margin-bottom: 1em;
+                text-align: justify;
+            }
 
-      ul {
-        list-style-type: disc;
-        padding-left: 20px;
-      }
+            ul {
+                list-style-type: disc;
+                padding-left: 20px;
+            }
 
-      li {
-        margin-bottom: 0.5em;
-      }
+            li {
+                margin-bottom: 0.5em;
+            }
 
-      .social-links {
-        text-align: center;
-        margin-top: 2em;
-        font-size: 1em;
-      }
-      .social-links a {
-        margin: 0 10px;
-      }
+            .social-links {
+                text-align: center;
+                margin-top: 2em;
+                font-size: 1em;
+            }
+            .social-links a {
+                margin: 0 10px;
+            }
 
-      .publication-item {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        margin-bottom: 30px;
-        padding-bottom: 20px;
-        border-bottom: 1px dashed #eee;
-        align-items: flex-start;
-      }
+            .publication-item {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                margin-bottom: 30px;
+                padding-bottom: 20px;
+                border-bottom: 1px dashed #eee;
+                align-items: flex-start;
+            }
 
-      .publication-item:last-child {
-        border-bottom: none;
-      }
+            .publication-item:last-child {
+                border-bottom: none;
+            }
 
-      .publication-media {
-        flex: 0 0 200px;
-        max-width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-        border-radius: 3px;
-        overflow: hidden;
-      }
+            .publication-media {
+                flex: 0 0 200px;
+                max-width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+                border-radius: 3px;
+                overflow: hidden;
+            }
 
-      .teaser-image,
-      .teaser-video {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
-      }
+            .teaser-image,
+            .teaser-video {
+                width: 100%;
+                height: auto;
+                display: block;
+                object-fit: cover;
+            }
 
-      .publication-details {
-        flex: 1;
-        min-width: 300px;
-      }
+            .publication-details {
+                flex: 1;
+                min-width: 300px;
+            }
 
-      .publication-details p {
-        margin-bottom: 0.5em;
-        text-align: left;
-      }
+            .publication-details p {
+                margin-bottom: 0.5em;
+                text-align: left;
+            }
 
-      .authors {
-        color: #555;
-        font-size: 0.95em;
-      }
+            .authors {
+                color: #555;
+                font-size: 0.95em;
+            }
 
-      .venue {
-        font-style: italic;
-        font-size: 0.95em;
-        color: #666;
-      }
+            .venue {
+                font-style: italic;
+                font-size: 0.95em;
+                color: #666;
+            }
 
-      .links a {
-        margin-right: 15px;
-        white-space: nowrap;
-        font-size: 0.95em;
-      }
+            .links a {
+                margin-right: 15px;
+                white-space: nowrap;
+                font-size: 0.95em;
+            }
 
-      footer {
-        text-align: right;
-        margin-top: 50px;
-        padding-top: 20px;
-        border-top: 1px solid #eee;
-        color: #777;
-        font-size: 0.9em;
-      }
+            footer {
+                text-align: right;
+                margin-top: 50px;
+                padding-top: 20px;
+                border-top: 1px solid #eee;
+                color: #777;
+                font-size: 0.9em;
+            }
 
-      @media (max-width: 768px) {
-        .profile-section {
-          flex-direction: column;
-          text-align: center;
-        }
+            @media (max-width: 768px) {
+                .profile-section {
+                    flex-direction: column;
+                    text-align: center;
+                }
 
-        .profile-info {
-          order: 2;
-        }
+                .profile-info {
+                    order: 2;
+                }
 
-        .profile-image-wrapper {
-          order: 1;
-          margin-bottom: 20px;
-        }
+                .profile-image-wrapper {
+                    order: 1;
+                    margin-bottom: 20px;
+                }
 
-        .profile-image {
-          max-width: 200px;
-        }
+                .profile-image {
+                    max-width: 200px;
+                }
 
-        .publication-item {
-          flex-direction: column;
-          align-items: center;
-        }
+                .publication-item {
+                    flex-direction: column;
+                    align-items: center;
+                }
 
-        .publication-media {
-          flex: 0 0 auto;
-          width: 80%;
-          max-width: 300px;
-          margin-bottom: 15px;
-        }
+                .publication-media {
+                    flex: 0 0 auto;
+                    width: 80%;
+                    max-width: 300px;
+                    margin-bottom: 15px;
+                }
 
-        .publication-details {
-          text-align: center;
-          min-width: unset;
-        }
+                .publication-details {
+                    text-align: center;
+                    min-width: unset;
+                }
 
-        .links {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 10px;
-        }
-      }
+                .links {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 10px;
+                }
+            }
 
-      @media (max-width: 480px) {
-        body {
-          padding: 15px;
-        }
+            @media (max-width: 480px) {
+                body {
+                    padding: 15px;
+                }
 
-        .container {
-          padding: 20px;
-        }
+                .container {
+                    padding: 20px;
+                }
 
-        h1.name {
-          font-size: 2em;
-        }
+                h1.name {
+                    font-size: 2em;
+                }
 
-        .position {
-          font-size: 1em;
-        }
+                .position {
+                    font-size: 1em;
+                }
 
-        h2.section-heading {
-          font-size: 1.5em;
-        }
+                h2.section-heading {
+                    font-size: 1.5em;
+                }
 
-        .publication-media {
-          width: 95%;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <header class="profile-section">
-        <div class="profile-info">
-          <h1 class="name">Zheng Gu &nbsp; 顾峥</h1>
-          <!-- <p class="position">Assistant Professor</p> -->
-          <p>
-            I am currently an Assistant Professor with the
-            <a
-              href="https://vcc.tech/index"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Visual Computing Research Center (VCC)</a
-            >
-            (led by
-            <a
-              href="https://vcc.tech/~huihuang/home"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Prof. Hui Huang</a
-            >) at the
-            <a
-              href="https://csse.szu.edu.cn/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >College of Computer Science and Software Engineering</a
-            >,
-            <a
-              href="https://www.szu.edu.cn/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Shenzhen University</a
-            >.
-          </p>
-          <p>
-            I received my Ph.D. degree from the
-            <a
-              href="https://cs.nju.edu.cn/rl/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Reasoning and Learning (RL) Group</a
-            >
-            at College of Computer, Nanjing University in 2024, advised by
-            <a
-              href="https://cs.nju.edu.cn/gaoyang/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Prof. Yang Gao</a
-            >
-            and
-            <a
-              href="https://cs.nju.edu.cn/huojing"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Prof. Jing Huo</a
-            >. I received my dual Ph.D. degree from Department of Computer
-            Science, City University of Hong Kong in 2025, advised by
-            <a
-              href="https://www.cityu.edu.hk/stfprofile/jingliao.htm"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Prof. Jing Liao</a
-            >. I received my B.Sc. degree from Nanjing University in 2017.
-          </p>
-          <p>
-            Driven by a passion for Deep Generative Models, I explore the
-            synergy between Machine Learning, Computer Vision, and Computer
-            Graphics. Recently, my research has focused on building controllable
-            and transferable AIGC systems that can not only generate images,
-            videos, 3D content, or music, but also understand and evolve through
-            Open-World scenarios to empower human creativity.
-          </p>
-          <address>
-            Address: L6-811, Shenzhen University Cang Hai Campus, Shenzhen,
-            China
-          </address>
-          <p>Email: guzheng@szu.edu.cn</p>
-          <p class="social-links">
-            <a
-              href="https://scholar.google.com/citations?user=Nwg_u4EAAAAJ"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Google Scholar</a
-            >
-            &nbsp;/&nbsp;
-            <a
-              href="https://github.com/edward3862"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub</a
-            >
-            &nbsp;/&nbsp;
-            <a
-              href="https://csse.szu.edu.cn/pages/user/index?id=1330"
-              target="_blank"
-              rel="noopener noreferrer"
-              >中文</a
-            >
-          </p>
+                .publication-media {
+                    width: 95%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="profile-section">
+                <div class="profile-info">
+                    <h1 class="name">Zheng Gu &nbsp; 顾峥</h1>
+                    <!-- <p class="position">Assistant Professor</p> -->
+                    <p>
+                        I am currently an Assistant Professor with the
+                        <a
+                            href="https://vcc.tech/index"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Visual Computing Research Center (VCC)</a
+                        >
+                        (led by
+                        <a
+                            href="https://vcc.tech/~huihuang/home"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Prof. Hui Huang</a
+                        >) at the
+                        <a
+                            href="https://csse.szu.edu.cn/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >College of Computer Science and Software
+                            Engineering</a
+                        >,
+                        <a
+                            href="https://www.szu.edu.cn/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Shenzhen University</a
+                        >.
+                    </p>
+                    <p>
+                        I received my Ph.D. degree from the
+                        <a
+                            href="https://cs.nju.edu.cn/rl/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Reasoning and Learning (RL) Group</a
+                        >
+                        at College of Computer, Nanjing University in 2024,
+                        advised by
+                        <a
+                            href="https://cs.nju.edu.cn/gaoyang/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Prof. Yang Gao</a
+                        >
+                        and
+                        <a
+                            href="https://cs.nju.edu.cn/huojing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Prof. Jing Huo</a
+                        >. I received my dual Ph.D. degree from Department of
+                        Computer Science, City University of Hong Kong in 2025,
+                        advised by
+                        <a
+                            href="https://www.cityu.edu.hk/stfprofile/jingliao.htm"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Prof. Jing Liao</a
+                        >. I received my B.Sc. degree from Nanjing University in
+                        2017.
+                    </p>
+                    <p>
+                        Driven by a passion for Deep Generative Models, I
+                        explore the synergy between Machine Learning, Computer
+                        Vision, and Computer Graphics. Recently, my research has
+                        focused on building controllable and transferable AIGC
+                        systems that can not only generate images, videos, 3D
+                        content, or music, but also understand and evolve
+                        through Open-World scenarios to empower human
+                        creativity.
+                    </p>
+                    <address>
+                        Address: L6-811, Shenzhen University Cang Hai Campus,
+                        Shenzhen, China
+                    </address>
+                    <p>Email: guzheng@szu.edu.cn</p>
+                    <p class="social-links">
+                        <a
+                            href="https://scholar.google.com/citations?user=Nwg_u4EAAAAJ"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Google Scholar</a
+                        >
+                        &nbsp;/&nbsp;
+                        <a
+                            href="https://github.com/edward3862"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >GitHub</a
+                        >
+                        &nbsp;/&nbsp;
+                        <a
+                            href="https://csse.szu.edu.cn/pages/user/index?id=1330"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >中文</a
+                        >
+                    </p>
+                </div>
+                <div class="profile-image-wrapper">
+                    <img
+                        src="asset/teaser/guzheng.JPEG"
+                        alt="Zheng Gu"
+                        class="profile-image"
+                    />
+                </div>
+            </header>
+
+            <section class="news-section">
+                <h2 class="section-heading">News</h2>
+                <ul>
+                    <li>
+                        [2026-05] One paper on
+                        <a href="#paper-mtvinpaint">video inpainting</a> is
+                        accepted by TVCG.
+                    </li>
+                    <li>
+                        [2026-03] One paper on
+                        <a href="https://ssalign.github.io/"
+                            >pictorial charts generation</a
+                        >
+                        is accepted by SIGGRAPH 2026.
+                    </li>
+                    <li>
+                        [2026-02] Two papers on
+                        <a href="#paper-imgdecom">image decomposition</a> and
+                        <a href="#paper-da4d">4D detection</a> are accepted by
+                        CVPR 2026.
+                    </li>
+                    <li>
+                        [2025-11] One paper on image style transfer is accepted
+                        by CVIU.
+                    </li>
+                    <li>
+                        [2025-05] One paper on
+                        <a href="#paper-cotvtm">visual-to-music generation</a>
+                        is accepted by ACL Findings 2025.
+                    </li>
+                    <li>
+                        [2025-01] I join the VCC group at Shenzhen University.
+                    </li>
+                    <li>
+                        [2024-12] I defend my PhD thesis at City University of
+                        Hong Kong.
+                    </li>
+                    <li>
+                        [2024-11] I defend my PhD thesis at Nanjing University.
+                    </li>
+                    <li>
+                        [2024-10] I am invited to give a talk at PRCV 2024 PhD
+                        Workshop.
+                    </li>
+                    <li>
+                        [2024-06] One paper on
+                        <a href="#paper-fewshot">few-shot image generation</a>
+                        is accepted by PRCV 2024.
+                    </li>
+                    <li>
+                        [2024-03] One paper on
+                        <a href="#paper-analogist"
+                            >visual in-context learning</a
+                        >
+                        is accepted by SIGGRAPH 2024.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="publications-section">
+                <h2 class="section-heading">Publications</h2>
+
+                <article class="publication-item">
+                    <div class="publication-media">
+                        <!-- <img src="asset/teaser/gu2026cycle.mp4" class="teaser-image" /> -->
+                        <video
+                            muted
+                            autoplay
+                            loop
+                            src="asset/teaser/gu2026cycle.mp4"
+                            class="teaser-video"
+                        ></video>
+                    </div>
+                    <div class="publication-details">
+                        <h3 class="paper-title" id="paper-imgdecom">
+                            Cycle-Consistent Tuning for Layered Image
+                            Decomposition
+                        </h3>
+                        <p class="authors">
+                            <strong>Zheng Gu</strong>, Min Lu, Zhida Sun, Dani
+                            Lischinski, Daniel Cohen-Or, and Hui Huang*
+                        </p>
+                        <p class="venue">
+                            <em
+                                >IEEE/CVF Conference on Computer Vision and
+                                Pattern Recognition</em
+                            >, 2026
+                        </p>
+                        <p class="links">
+                            <a
+                                href="https://edward3862.github.io/ImgDecom/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Project Page]</a
+                            >
+                            <a
+                                href="https://arxiv.org/abs/2602.20989"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Arxiv]</a
+                            >
+                            <a
+                                href="https://github.com/edward3862/ImgDecom"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Code]</a
+                            >
+                        </p>
+                    </div>
+                </article>
+
+                <article class="publication-item">
+                    <div class="publication-media">
+                        <img
+                            src="asset/teaser/hou2026da4d.gif"
+                            alt="DA4D Teaser"
+                            class="teaser-image"
+                        />
+                    </div>
+                    <div class="publication-details">
+                        <h3 class="paper-title" id="paper-da4d">
+                            DetAny4D: Detect Anything 4D Temporally in a
+                            Streaming RGB Video
+                        </h3>
+                        <p class="authors">
+                            Jiawei Hou, Shenghao Zhang, Can Wang,
+                            <strong>Zheng Gu</strong>, Yonggen Ling, Taiping
+                            Zeng, Xiangyang Xue, and Jingbo Zhang
+                        </p>
+                        <p class="venue">
+                            <em
+                                >IEEE/CVF Conference on Computer Vision and
+                                Pattern Recognition</em
+                            >, 2026
+                        </p>
+                        <p class="links">
+                            <a
+                                href="https://jarvishou829.github.io/DA4D/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Project Page]</a
+                            >
+                            <a
+                                href="https://arxiv.org/abs/2511.18814"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Arxiv]</a
+                            >
+                        </p>
+                    </div>
+                </article>
+
+                <article class="publication-item">
+                    <div class="publication-media">
+                        <img
+                            src="asset/teaser/guan2025cot.png"
+                            alt="CoT-VTM Teaser"
+                            class="teaser-image"
+                        />
+                    </div>
+                    <div class="publication-details">
+                        <h3 class="paper-title" id="paper-cotvtm">
+                            CoT-VTM: Visual-to-Music Generation with
+                            Chain-of-Thought Reasoning
+                        </h3>
+                        <p class="authors">
+                            Xikang Guan, <strong>Zheng Gu</strong>, Jing Huo*,
+                            Tianyu Ding, and Yang Gao
+                        </p>
+                        <p class="venue">
+                            <em
+                                >Findings of the Annual Meeting of the
+                                Association for Computational Linguistics (ACL
+                                Findings)</em
+                            >, 2025
+                        </p>
+                        <p class="links">
+                            <a
+                                href="https://xxkkxxx.github.io/cot-vtm/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Project Page]</a
+                            >
+                            <a
+                                href="https://aclanthology.org/2025.findings-acl.647/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Paper]</a
+                            >
+                        </p>
+                    </div>
+                </article>
+
+                <article class="publication-item">
+                    <div class="publication-media">
+                        <video
+                            muted
+                            autoplay
+                            loop
+                            src="asset/teaser/yang2025inpaint.mp4"
+                            class="teaser-video"
+                        ></video>
+                    </div>
+                    <div class="publication-details">
+                        <h3 class="paper-title" id="paper-mtvinpaint">
+                            MTV-Inpaint: Multi-Task Long Video Inpainting
+                        </h3>
+                        <p class="authors">
+                            Shiyuan Yang, <strong>Zheng Gu</strong>, Liang Hou,
+                            Xin Tao, Pengfei Wan, Xiaodong Chen, and Jing Liao
+                        </p>
+                        <p class="venue">
+                            <em>
+                                Accepted by IEEE Transactions on Visualization
+                                and Computer Graphics (TVCG)</em
+                            >, 2026
+                        </p>
+                        <p class="links">
+                            <a
+                                href="https://mtv-inpaint.github.io/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Project Page]</a
+                            >
+                            <a
+                                href="https://arxiv.org/pdf/2503.11412"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Arxiv]</a
+                            >
+                            <a
+                                href="https://huggingface.co/papers/2503.11412"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Hugging Face]</a
+                            >
+                        </p>
+                    </div>
+                </article>
+
+                <article class="publication-item">
+                    <div class="publication-media">
+                        <img
+                            src="asset/teaser/gu2024liesgan.jpg"
+                            alt="LiesGAN Teaser"
+                            class="teaser-image"
+                        />
+                    </div>
+                    <div class="publication-details">
+                        <h3 class="paper-title" id="paper-fewshot">
+                            Task-Aware Few-Shot Image Generation via Dynamic
+                            Local Distribution Estimation and Sampling
+                        </h3>
+                        <p class="authors">
+                            <strong>Zheng Gu</strong>, Wenbin Li*, Tianyu Ding,
+                            Zhengli Wang, Jing Huo, Kuihua Huang, and Yang Gao
+                        </p>
+                        <p class="venue">
+                            <em
+                                >Chinese Conference on Pattern Recognition and
+                                Computer Vision (PRCV)</em
+                            >, 2024
+                        </p>
+                        <p class="links">
+                            <a
+                                href="https://link.springer.com/chapter/10.1007/978-981-97-8490-5_33"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Paper]</a
+                            >
+                        </p>
+                    </div>
+                </article>
+
+                <article class="publication-item">
+                    <div class="publication-media">
+                        <img
+                            src="asset/teaser/gu2024analogist.jpg"
+                            alt="Analogist Teaser"
+                            class="teaser-image"
+                        />
+                    </div>
+                    <div class="publication-details">
+                        <h3 class="paper-title" id="paper-analogist">
+                            Analogist: Out-of-the-box Visual In-Context Learning
+                            with Image Diffusion Model
+                        </h3>
+                        <p class="authors">
+                            <strong>Zheng Gu</strong>, Shiyuan Yang, Jing Liao*,
+                            Jing Huo*, and Yang Gao
+                        </p>
+                        <p class="venue">
+                            <em
+                                >ACM Transactions on Graphics (Proceedings of
+                                SIGGRAPH)</em
+                            >, 2024
+                        </p>
+                        <p class="links">
+                            <a
+                                href="https://analogist2d.github.io/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Project Page]</a
+                            >
+                            <a
+                                href="https://dl.acm.org/doi/10.1145/3658136"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Paper]</a
+                            >
+                            <a
+                                href="https://arxiv.org/abs/2405.10316"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Arxiv]</a
+                            >
+                            <a
+                                href="https://github.com/edward3862/Analogist"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Code]</a
+                            >
+                            <a
+                                href="https://huggingface.co/datasets/picana/Analogist"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Data]</a
+                            >
+                        </p>
+                    </div>
+                </article>
+
+                <article class="publication-item">
+                    <div class="publication-media">
+                        <img
+                            src="asset/teaser/gu2021carime.png"
+                            alt="CariMe Teaser"
+                            class="teaser-image"
+                        />
+                    </div>
+                    <div class="publication-details">
+                        <h3 class="paper-title" id="paper-carime">
+                            CariMe: Unpaired Caricature Generation with Multiple
+                            Exaggerations
+                        </h3>
+                        <p class="authors">
+                            <strong>Zheng Gu</strong>, Chuanqi Dong, Jing Huo*,
+                            Wenbin Li, and Yang Gao
+                        </p>
+                        <p class="venue">
+                            <em>IEEE Transactions on Multimedia (TMM)</em>, 2021
+                        </p>
+                        <p class="links">
+                            <a
+                                href="https://ieeexplore.ieee.org/abstract/document/9454341"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Paper]</a
+                            >
+                            <a
+                                href="https://arxiv.org/abs/2010.00246"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Arxiv]</a
+                            >
+                            <a
+                                href="https://github.com/edward3862/CariMe-pytorch"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Code]</a
+                            >
+                            <a
+                                href="https://cs.nju.edu.cn/rl/WebCaricature.htm"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Data]</a
+                            >
+                        </p>
+                    </div>
+                </article>
+
+                <article class="publication-item">
+                    <div class="publication-media">
+                        <img
+                            src="asset/teaser/gu2021lofgan.png"
+                            alt="LoFGAN Teaser"
+                            class="teaser-image"
+                        />
+                    </div>
+                    <div class="publication-details">
+                        <h3 class="paper-title" id="paper-lofgan">
+                            LoFGAN: Fusing Local Representations for Few-shot
+                            Image Generation
+                        </h3>
+                        <p class="authors">
+                            <strong>Zheng Gu</strong
+                            ><span class="superscript">&#8224;</span>, Wenbin
+                            Li<span class="superscript">&#8224;</span>, Jing
+                            Huo*, Lei Wang, and Yang Gao
+                        </p>
+                        <p class="venue">
+                            <em
+                                >International Conference on Computer Vision
+                                (ICCV)</em
+                            >, 2021
+                        </p>
+                        <p class="links">
+                            <a
+                                href="https://openaccess.thecvf.com/content/ICCV2021/papers/Gu_LoFGAN_Fusing_Local_Representations_for_Few-Shot_Image_Generation_ICCV_2021_paper.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Paper]</a
+                            >
+                            <a
+                                href="https://github.com/edward3862/LoFGAN-pytorch"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Code]</a
+                            >
+                            <a
+                                href="https://box.nju.edu.cn/d/27fe9433f56a481ebe70/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Data]</a
+                            >
+                        </p>
+                    </div>
+                </article>
+
+                <article class="publication-item">
+                    <div class="publication-media">
+                        <img
+                            src="asset/teaser/dong2020learning.png"
+                            alt="Learning Task-aware Teaser"
+                            class="teaser-image"
+                        />
+                    </div>
+                    <div class="publication-details">
+                        <h3 class="paper-title" id="paper-tll">
+                            Learning Task-aware Local Representations for
+                            Few-shot Learning
+                        </h3>
+                        <p class="authors">
+                            Chuanqi Dong, Wenbin Li, Jing Huo,
+                            <strong>Zheng Gu</strong>, and Yang Gao*
+                        </p>
+                        <p class="venue">
+                            <em
+                                >International Joint Conference on Artificial
+                                Intelligence (IJCAI)</em
+                            >, 2020
+                        </p>
+                        <p class="links">
+                            <a
+                                href="https://www.ijcai.org/proceedings/2020/0100.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Paper]</a
+                            >
+                            <a
+                                href="https://github.com/LegenDong/ATL-Net"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Code]</a
+                            >
+                        </p>
+                    </div>
+                </article>
+
+                <article class="publication-item">
+                    <div class="publication-media">
+                        <img
+                            src="asset/teaser/ji2020unsupervised.png"
+                            alt="Unsupervised Domain Attention Teaser"
+                            class="teaser-image"
+                        />
+                    </div>
+                    <div class="publication-details">
+                        <h3 class="paper-title" id="paper-daan">
+                            Unsupervised Domain Attention Adaptation Network for
+                            Caricature Attribute Recognition
+                        </h3>
+                        <p class="authors">
+                            Wen Ji, Kelei He, Jing Huo*,
+                            <strong>Zheng Gu</strong>, and Yang Gao
+                        </p>
+                        <p class="venue">
+                            <em
+                                >European Conference on Computer Vision
+                                (ECCV)</em
+                            >, 2020
+                        </p>
+                        <p class="links">
+                            <a
+                                href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123530018.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Paper]</a
+                            >
+                            <a
+                                href="https://github.com/KeleiHe/DAAN"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Code]</a
+                            >
+                        </p>
+                    </div>
+                </article>
+
+                <article class="publication-item">
+                    <div class="publication-media">
+                        <img
+                            src="asset/teaser/dong2019deepmef.png"
+                            alt="DeepMEF Teaser"
+                            class="teaser-image"
+                        />
+                    </div>
+                    <div class="publication-details">
+                        <h3 class="paper-title" id="paper-deepmef">
+                            DeepMEF: A Deep Model Ensemble Framework for Video
+                            Based Multi-modal Person Identification
+                        </h3>
+                        <p class="authors">
+                            Chuanqi Dong, <strong>Zheng Gu</strong>, Zhonghao
+                            Huang, Wen Ji, Jing Huo, and Yang Gao
+                        </p>
+                        <p class="venue">
+                            <em>ACM Conference on Multimedia (ACM MM)</em>, 2019
+                        </p>
+                        <p class="links">
+                            <a
+                                href="https://dl.acm.org/doi/abs/10.1145/3343031.3356057"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Paper]</a
+                            >
+                            <a
+                                href="https://github.com/LegenDong/IQIYI_VID_FACE_2019"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[Code]</a
+                            >
+                        </p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="teaching-section">
+                <h2 class="section-heading">Teaching</h2>
+                <ul>
+                    <li>
+                        Fundamentals of Computer, Shenzhen University,
+                        Instructor, 2025 Fall
+                    </li>
+                    <li>
+                        Algorithm Design and Analysis, Shenzhen University,
+                        Instructor, 2025 Fall
+                    </li>
+                    <li>
+                        Web-based Programming, Shenzhen University, Instructor,
+                        2025 Spring, 2026 Spring
+                    </li>
+                    <li>
+                        CS3402: Database Systems, City University of HongKong,
+                        Teaching Assistant, 2022-2023
+                    </li>
+                    <li>
+                        Object-oriented Design Method, Nanjing University,
+                        Teaching Assistant, 2019-2020
+                    </li>
+                    <li>
+                        Artificial Intelligence, Nanjing University, Teaching
+                        Assistant, 2018-2019
+                    </li>
+                </ul>
+            </section>
+
+            <section class="honors-section">
+                <h2 class="section-heading">Honors</h2>
+                <ul>
+                    <li><b>Huawei Scholarship</b>, Nanjing University, 2021</li>
+                    <li>
+                        <b>Suzhou Yucai Scholarship</b>, Nanjing University,
+                        2021
+                    </li>
+                    <li>
+                        <b>Outstanding Postgraduate Student</b>, Nanjing
+                        University, 2021
+                    </li>
+                    <li>
+                        <b>PhD Talent Scholarship</b>, Nanjing University, 2020
+                    </li>
+                    <li>
+                        <b>3rd</b> Place, iQIYI Celebrity Video Identification
+                        Challenge of ACM MM, 2019
+                    </li>
+                </ul>
+            </section>
+
+            <section class="service-section">
+                <h2 class="section-heading">Service</h2>
+                <ul>
+                    <li>
+                        <b>Conference/Journal Reviewer:</b> SIGGRAPH Asia, ICCV,
+                        ECCV, ACCV, WACV, TVCG, Multimedia Systems.
+                    </li>
+                    <li>
+                        <b>Executive Chair:</b> CCF Nanjing University Student
+                        Branch in 2019-2021.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="experience-section">
+                <h2 class="section-heading">Experience</h2>
+                <ul>
+                    <li>
+                        <strong>2023.12~2024.07</strong> &nbsp; Research
+                        Assistant at CityU Shenzhen Research Institute
+                    </li>
+                    <li>
+                        <strong>2017.08~2018.07</strong> &nbsp; Serve as a
+                        Volunteer Teacher at Yunnan Province, Southwest China
+                    </li>
+                </ul>
+            </section>
         </div>
-        <div class="profile-image-wrapper">
-          <img
-            src="asset/teaser/guzheng.JPEG"
-            alt="Zheng Gu"
-            class="profile-image"
-          />
-        </div>
-      </header>
-
-      <section class="news-section">
-        <h2 class="section-heading">News</h2>
-        <ul>
-          <li>[2026-02] Two papers are accepted by CVPR 2026.</li>
-          <li>[2025-11] One paper is accepted by CVIU.</li>
-          <li>
-            [2025-05] One paper on visual-to-music generation is accepted by ACL
-            Findings 2025.
-          </li>
-          <li>[2025-01] I join the VCC group at Shenzhen University.</li>
-          <li>
-            [2024-12] I defend my PhD thesis at City University of Hong Kong.
-          </li>
-          <li>[2024-11] I defend my PhD thesis at Nanjing University.</li>
-          <li>
-            [2024-10] I am invited to give a talk at PRCV 2024 PhD Workshop.
-          </li>
-          <li>
-            [2024-06] One paper on few-shot image generation is accepted by PRCV
-            2024.
-          </li>
-          <li>
-            [2024-03] One paper on visual in-context learning is accepted by
-            SIGGRAPH 2024.
-          </li>
-        </ul>
-      </section>
-
-      <section class="publications-section">
-        <h2 class="section-heading">Publications</h2>
-
-        <article class="publication-item">
-          <div class="publication-media">
-            <!-- <img src="asset/teaser/gu2026cycle.mp4" class="teaser-image" /> -->
-            <video
-              muted
-              autoplay
-              loop
-              src="asset/teaser/gu2026cycle.mp4"
-              class="teaser-video"
-            ></video>
-          </div>
-          <div class="publication-details">
-            <h3 class="paper-title">
-              Cycle-Consistent Tuning for Layered Image Decomposition
-            </h3>
-            <p class="authors">
-              <strong>Zheng Gu</strong>, Min Lu, Zhida Sun, Dani Lischinski,
-              Daniel Cohen-Or, and Hui Huang*
-            </p>
-            <p class="venue">
-              <em
-                >IEEE/CVF Conference on Computer Vision and Pattern
-                Recognition</em
-              >, 2026 (Accepted to appear)
-            </p>
-            <p class="links">
-              <a
-                href="https://edward3862.github.io/ImgDecom/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Project Page]</a
-              >
-              <a
-                href="https://arxiv.org/abs/2602.20989"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Arxiv]</a
-              >
-              <a
-                href="https://github.com/edward3862/ImgDecom"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Code]</a
-              >
-            </p>
-          </div>
-        </article>
-
-        <article class="publication-item">
-          <div class="publication-media">
-            <img
-              src="asset/teaser/hou2026da4d.gif"
-              alt="DA4D Teaser"
-              class="teaser-image"
-            />
-          </div>
-          <div class="publication-details">
-            <h3 class="paper-title">
-              DetAny4D: Detect Anything 4D Temporally in a Streaming RGB Video
-            </h3>
-            <p class="authors">
-              Jiawei Hou, Shenghao Zhang, Can Wang, <strong>Zheng Gu</strong>,
-              Yonggen Ling, Taiping Zeng, Xiangyang Xue, and Jingbo Zhang
-            </p>
-            <p class="venue">
-              <em
-                >IEEE/CVF Conference on Computer Vision and Pattern
-                Recognition</em
-              >, 2026 (Accepted to appear)
-            </p>
-            <p class="links">
-              <a
-                href="https://jarvishou829.github.io/DA4D/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Project Page]</a
-              >
-              <a
-                href="https://arxiv.org/abs/2511.18814"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Arxiv]</a
-              >
-            </p>
-          </div>
-        </article>
-
-        <article class="publication-item">
-          <div class="publication-media">
-            <img
-              src="asset/teaser/guan2025cot.png"
-              alt="CoT-VTM Teaser"
-              class="teaser-image"
-            />
-          </div>
-          <div class="publication-details">
-            <h3 class="paper-title">
-              CoT-VTM: Visual-to-Music Generation with Chain-of-Thought
-              Reasoning
-            </h3>
-            <p class="authors">
-              Xikang Guan, <strong>Zheng Gu</strong>, Jing Huo*, Tianyu Ding,
-              and Yang Gao
-            </p>
-            <p class="venue">
-              <em
-                >Findings of the Annual Meeting of the Association for
-                Computational Linguistics (ACL Findings)</em
-              >, 2025
-            </p>
-            <p class="links">
-              <a
-                href="https://xxkkxxx.github.io/cot-vtm/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Project Page]</a
-              >
-              <a
-                href="https://aclanthology.org/2025.findings-acl.647/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Paper]</a
-              >
-            </p>
-          </div>
-        </article>
-
-        <article class="publication-item">
-          <div class="publication-media">
-            <video
-              muted
-              autoplay
-              loop
-              src="asset/teaser/yang2025inpaint.mp4"
-              class="teaser-video"
-            ></video>
-          </div>
-          <div class="publication-details">
-            <h3 class="paper-title">
-              MTV-Inpaint: Multi-Task Long Video Inpainting
-            </h3>
-            <p class="authors">
-              Shiyuan Yang, <strong>Zheng Gu</strong>, Liang Hou, Xin Tao,
-              Pengfei Wan, Xiaodong Chen, and Jing Liao
-            </p>
-            <p class="venue"><em>arxiv preprint</em>, 2025</p>
-            <p class="links">
-              <a
-                href="https://mtv-inpaint.github.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Project Page]</a
-              >
-              <a
-                href="https://arxiv.org/pdf/2503.11412"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Arxiv]</a
-              >
-              <a
-                href="https://huggingface.co/papers/2503.11412"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Hugging Face]</a
-              >
-            </p>
-          </div>
-        </article>
-
-        <article class="publication-item">
-          <div class="publication-media">
-            <img
-              src="asset/teaser/gu2024liesgan.jpg"
-              alt="LiesGAN Teaser"
-              class="teaser-image"
-            />
-          </div>
-          <div class="publication-details">
-            <h3 class="paper-title">
-              Task-Aware Few-Shot Image Generation via Dynamic Local
-              Distribution Estimation and Sampling
-            </h3>
-            <p class="authors">
-              <strong>Zheng Gu</strong>, Wenbin Li*, Tianyu Ding, Zhengli Wang,
-              Jing Huo, Kuihua Huang, and Yang Gao
-            </p>
-            <p class="venue">
-              <em
-                >Chinese Conference on Pattern Recognition and Computer Vision
-                (PRCV)</em
-              >, 2024
-            </p>
-            <p class="links">
-              <a
-                href="https://link.springer.com/chapter/10.1007/978-981-97-8490-5_33"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Paper]</a
-              >
-            </p>
-          </div>
-        </article>
-
-        <article class="publication-item">
-          <div class="publication-media">
-            <img
-              src="asset/teaser/gu2024analogist.jpg"
-              alt="Analogist Teaser"
-              class="teaser-image"
-            />
-          </div>
-          <div class="publication-details">
-            <h3 class="paper-title">
-              Analogist: Out-of-the-box Visual In-Context Learning with Image
-              Diffusion Model
-            </h3>
-            <p class="authors">
-              <strong>Zheng Gu</strong>, Shiyuan Yang, Jing Liao*, Jing Huo*,
-              and Yang Gao
-            </p>
-            <p class="venue">
-              <em>ACM Transactions on Graphics (Proceedings of SIGGRAPH)</em>,
-              2024
-            </p>
-            <p class="links">
-              <a
-                href="https://analogist2d.github.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Project Page]</a
-              >
-              <a
-                href="https://dl.acm.org/doi/10.1145/3658136"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Paper]</a
-              >
-              <a
-                href="https://arxiv.org/abs/2405.10316"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Arxiv]</a
-              >
-              <a
-                href="https://github.com/edward3862/Analogist"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Code]</a
-              >
-              <a
-                href="https://huggingface.co/datasets/picana/Analogist"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Data]</a
-              >
-            </p>
-          </div>
-        </article>
-
-        <article class="publication-item">
-          <div class="publication-media">
-            <img
-              src="asset/teaser/gu2021carime.png"
-              alt="CariMe Teaser"
-              class="teaser-image"
-            />
-          </div>
-          <div class="publication-details">
-            <h3 class="paper-title">
-              CariMe: Unpaired Caricature Generation with Multiple Exaggerations
-            </h3>
-            <p class="authors">
-              <strong>Zheng Gu</strong>, Chuanqi Dong, Jing Huo*, Wenbin Li, and
-              Yang Gao
-            </p>
-            <p class="venue">
-              <em>IEEE Transactions on Multimedia (TMM)</em>, 2021
-            </p>
-            <p class="links">
-              <a
-                href="https://ieeexplore.ieee.org/abstract/document/9454341"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Paper]</a
-              >
-              <a
-                href="https://arxiv.org/abs/2010.00246"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Arxiv]</a
-              >
-              <a
-                href="https://github.com/edward3862/CariMe-pytorch"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Code]</a
-              >
-              <a
-                href="https://cs.nju.edu.cn/rl/WebCaricature.htm"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Data]</a
-              >
-            </p>
-          </div>
-        </article>
-
-        <article class="publication-item">
-          <div class="publication-media">
-            <img
-              src="asset/teaser/gu2021lofgan.png"
-              alt="LoFGAN Teaser"
-              class="teaser-image"
-            />
-          </div>
-          <div class="publication-details">
-            <h3 class="paper-title">
-              LoFGAN: Fusing Local Representations for Few-shot Image Generation
-            </h3>
-            <p class="authors">
-              <strong>Zheng Gu</strong><span class="superscript">&#8224;</span>,
-              Wenbin Li<span class="superscript">&#8224;</span>, Jing Huo*, Lei
-              Wang, and Yang Gao
-            </p>
-            <p class="venue">
-              <em>International Conference on Computer Vision (ICCV)</em>, 2021
-            </p>
-            <p class="links">
-              <a
-                href="https://openaccess.thecvf.com/content/ICCV2021/papers/Gu_LoFGAN_Fusing_Local_Representations_for_Few-Shot_Image_Generation_ICCV_2021_paper.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Paper]</a
-              >
-              <a
-                href="https://github.com/edward3862/LoFGAN-pytorch"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Code]</a
-              >
-              <a
-                href="https://box.nju.edu.cn/d/27fe9433f56a481ebe70/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Data]</a
-              >
-            </p>
-          </div>
-        </article>
-
-        <article class="publication-item">
-          <div class="publication-media">
-            <img
-              src="asset/teaser/dong2020learning.png"
-              alt="Learning Task-aware Teaser"
-              class="teaser-image"
-            />
-          </div>
-          <div class="publication-details">
-            <h3 class="paper-title">
-              Learning Task-aware Local Representations for Few-shot Learning
-            </h3>
-            <p class="authors">
-              Chuanqi Dong, Wenbin Li, Jing Huo, <strong>Zheng Gu</strong>, and
-              Yang Gao*
-            </p>
-            <p class="venue">
-              <em
-                >International Joint Conference on Artificial Intelligence
-                (IJCAI)</em
-              >, 2020
-            </p>
-            <p class="links">
-              <a
-                href="https://www.ijcai.org/proceedings/2020/0100.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Paper]</a
-              >
-              <a
-                href="https://github.com/LegenDong/ATL-Net"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Code]</a
-              >
-            </p>
-          </div>
-        </article>
-
-        <article class="publication-item">
-          <div class="publication-media">
-            <img
-              src="asset/teaser/ji2020unsupervised.png"
-              alt="Unsupervised Domain Attention Teaser"
-              class="teaser-image"
-            />
-          </div>
-          <div class="publication-details">
-            <h3 class="paper-title">
-              Unsupervised Domain Attention Adaptation Network for Caricature
-              Attribute Recognition
-            </h3>
-            <p class="authors">
-              Wen Ji, Kelei He, Jing Huo*, <strong>Zheng Gu</strong>, and Yang
-              Gao
-            </p>
-            <p class="venue">
-              <em>European Conference on Computer Vision (ECCV)</em>, 2020
-            </p>
-            <p class="links">
-              <a
-                href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123530018.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Paper]</a
-              >
-              <a
-                href="https://github.com/KeleiHe/DAAN"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Code]</a
-              >
-            </p>
-          </div>
-        </article>
-
-        <article class="publication-item">
-          <div class="publication-media">
-            <img
-              src="asset/teaser/dong2019deepmef.png"
-              alt="DeepMEF Teaser"
-              class="teaser-image"
-            />
-          </div>
-          <div class="publication-details">
-            <h3 class="paper-title">
-              DeepMEF: A Deep Model Ensemble Framework for Video Based
-              Multi-modal Person Identification
-            </h3>
-            <p class="authors">
-              Chuanqi Dong, <strong>Zheng Gu</strong>, Zhonghao Huang, Wen Ji,
-              Jing Huo, and Yang Gao
-            </p>
-            <p class="venue">
-              <em>ACM Conference on Multimedia (ACM MM)</em>, 2019
-            </p>
-            <p class="links">
-              <a
-                href="https://dl.acm.org/doi/abs/10.1145/3343031.3356057"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Paper]</a
-              >
-              <a
-                href="https://github.com/LegenDong/IQIYI_VID_FACE_2019"
-                target="_blank"
-                rel="noopener noreferrer"
-                >[Code]</a
-              >
-            </p>
-          </div>
-        </article>
-      </section>
-
-      <section class="honors-section">
-        <h2 class="section-heading">Honors</h2>
-        <ul>
-          <li><b>Huawei Scholarship</b>, Nanjing University, 2021</li>
-          <li><b>Suzhou Yucai Scholarship</b>, Nanjing University, 2021</li>
-          <li>
-            <b>Outstanding Postgraduate Student</b>, Nanjing University, 2021
-          </li>
-          <li><b>PhD Talent Scholarship</b>, Nanjing University, 2020</li>
-          <li>
-            <b>3rd</b> Place, iQIYI Celebrity Video Identification Challenge of
-            ACM MM, 2019
-          </li>
-        </ul>
-      </section>
-
-      <section class="teaching-section">
-        <h2 class="section-heading">Teaching</h2>
-        <ul>
-          <li>
-            Fundamentals of Computer, Shenzhen University, Instructor, 2025 Fall
-          </li>
-          <li>
-            Algorithm Design and Analysis, Shenzhen University, Instructor, 2025
-            Fall
-          </li>
-          <li>
-            Web-based Programming, Shenzhen University, Instructor, 2025 Spring
-          </li>
-          <li>
-            CS3402: Database Systems, City University of HongKong, Teaching
-            Assistant, 2022-2023
-          </li>
-          <li>
-            Object-oriented Design Method, Nanjing University, Teaching
-            Assistant, 2019-2020
-          </li>
-          <li>
-            Artificial Intelligence, Nanjing University, Teaching Assistant,
-            2018-2019
-          </li>
-        </ul>
-      </section>
-
-      <section class="service-section">
-        <h2 class="section-heading">Service</h2>
-        <ul>
-          <li>
-            <b>Conference/Journal Reviewer:</b> SIGGRAPH Asia, ICCV, ECCV, ACCV,
-            WACV, TVCG, Multimedia Systems.
-          </li>
-          <li>
-            <b>Executive Chair:</b> CCF Nanjing University Student Branch in
-            2019-2021.
-          </li>
-        </ul>
-      </section>
-
-      <section class="experience-section">
-        <h2 class="section-heading">Experience</h2>
-        <ul>
-          <li>
-            <strong>2023.12~2024.07</strong> &nbsp; Research Assistant at CityU
-            Shenzhen Research Institute
-          </li>
-          <li>
-            <strong>2017.08~2018.07</strong> &nbsp; Serve as a Volunteer Teacher
-            at Yunnan Province, Southwest China
-          </li>
-        </ul>
-      </section>
-    </div>
-  </body>
+    </body>
 </html>
